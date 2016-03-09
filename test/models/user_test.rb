@@ -65,4 +65,8 @@ class UserTest < ActiveSupport::TestCase
      assert_not @user.valid?
    end
 
+   test 'authenticated? should be base for user with nil digets' do
+     assert_not @user.authenticated?('')
+   end
+
 end
